@@ -22,7 +22,7 @@ jobs:
             - name: Set up Xcode
               uses: maxim-lobanov/setup-xcode@v1
               with:
-                  xcode-version: '16.2.0'
+                  xcode-version: '26.0'
 
             - name: Install Dependencies (Homebrew & Theos)
               run: |
@@ -62,7 +62,6 @@ jobs:
                   brew install Nonchalant/appicon/appicon
                   echo "Generating AppIcon..."
                   appicon app-icon.png --output-path ./PakePlus/Assets.xcassets/AppIcon.appiconset
-
             - name: Build IPA Package
               run: |
                   export THEOS=$HOME/theos
